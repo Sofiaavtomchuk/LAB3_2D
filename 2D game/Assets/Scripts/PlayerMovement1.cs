@@ -123,4 +123,10 @@ public class PlayerMovement1 : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("fef");
+        Destroy(collision.gameObject);
+    }
 }
